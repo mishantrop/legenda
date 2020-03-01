@@ -1,0 +1,64 @@
+.course-header {
+    background-color: #1c3069;
+    min-height: 260px;
+    overflow: hidden;
+    position: relative;
+    @media only screen and (max-width: 480px) {
+        min-height: auto;
+        position: static;
+    }
+    @media only screen and (max-width: 360px) {
+        min-height: auto;
+        position: static;
+    }
+    &__background {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
+        @media only screen and (max-width: 480px) {
+            position: static;
+        }
+        @media only screen and (max-width: 360px) {
+            position: static;
+        }
+    }
+    &__content {
+        padding: 30px 60px;
+        position: absolute;
+        width: 100%;
+        @media only screen and (max-width: 480px) {
+            padding: 10px 20px;
+            position: static;
+        }
+        @media only screen and (max-width: 360px) {
+            padding: 10px 20px;
+            position: static;
+        }
+    }
+    &__title {
+        color: #fff;
+        font-size: 35px;
+        font-weight: normal;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        @media only screen and (max-width: 480px) {
+            font-size: 24px;
+            margin: 0 0 6px 0;
+        }
+        @media only screen and (max-width: 360px) {
+            font-size: 24px;
+            margin: 0 0 6px 0;
+        }
+    }
+    &__subtitle {
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+}

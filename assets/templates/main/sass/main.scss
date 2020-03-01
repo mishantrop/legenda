@@ -1,0 +1,115 @@
+@import '_fonts-big.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+@import 'vendor/fontawesome/font-awesome.scss';
+@import 'vendor/niceselect/custom/_niceselect.scss';
+@import "vendor/quasiform/_quasiform-theme.scss";
+@import "vendor/remodal/_remodal-theme.scss";
+@import "vendor/remodal/_remodal.scss";
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.inner-container {
+    padding: 0 50px 50px 50px;
+    @media only screen and (max-width: 992px) {
+        padding: 0 20px 20px 20px;
+    }
+    @media only screen and (max-width: 360px) {
+        padding: 0 20px 20px 20px;
+    }
+}
+
+.body {
+    &--inner {
+        background-color: #f0f4f4;
+    }
+}
+
+@import '_article.scss';
+@import '_blog-item.scss';
+@import '_blog-pagination.scss';
+@import '_blog-types.scss';
+@import '_brute-group-form.scss';
+@import '_cert.scss';
+@import '_contacts-feedback.scss';
+@import '_contacts-map.scss';
+@import '_contacts.scss';
+@import '_course-feedback1.scss';
+@import '_course-feedback2.scss';
+@import '_course-group-instructor.scss';
+@import '_course-group.scss';
+@import '_course-group-form.scss';
+@import '_course-groups-types.scss';
+@import '_course-header.scss';
+@import '_course-item.scss';
+@import '_course-legend-level-bar.scss';
+@import '_course-legend-level-words.scss';
+@import '_course-numbers.scss';
+@import '_course-plan.scss';
+@import '_course-prices.scss';
+@import '_course-slider.scss';
+@import '_course-type.scss';
+@import '_course-types.scss';
+@import '_course.scss';
+@import '_courses-categories.scss';
+@import '_courses-types.scss';
+@import '_extreme-feedback.scss';
+@import '_extreme-show-item.scss';
+@import '_extreme-show.scss';
+@import '_faq.scss';
+@import '_footer__logo.scss';
+@import '_footer-navigation.scss';
+@import '_footer.scss';
+@import '_grid.scss';
+@import '_header__logo.scss';
+@import '_header-navigation.scss';
+@import '_header.scss';
+@import '_index-about.scss';
+@import '_index-advantages.scss';
+@import '_index-blog-item.scss';
+@import '_index-cert.scss';
+@import '_index-header__logo.scss';
+@import '_index-header-navigation.scss';
+@import '_index-header.scss';
+@import '_index-subheader.scss';
+@import '_index-test.scss';
+@import '_index-vehicles.scss';
+@import '_index-workflow.scss';
+@import '_index-workflow-mobile.scss';
+@import '_individual-form.scss';
+@import '_instagram.scss';
+@import '_modal.scss';
+@import '_oferta.scss';
+@import '_openlesson-form.scss';
+@import '_order-call.scss';
+@import '_place-item.scss';
+@import '_places.scss';
+@import '_prices.scss';
+@import '_schedule-group-form.scss';
+@import '_schedule-groups-filter.scss';
+@import '_schedule.scss';
+@import '_spinner.scss';
+@import '_team-hiring-form.scss';
+@import '_team-hiring.scss';
+@import '_team.scss';
+@import '_testing-form.scss';

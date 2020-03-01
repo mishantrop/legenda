@@ -1,0 +1,32 @@
+.schedule-groups-filter {
+	@media only screen and (max-width: 1290px) {
+		padding: 0 20px;
+	}
+	@media only screen and (max-width: 1200px) {
+		padding: 0 20px;
+	}
+	@media only screen and (max-width: 600px) {
+		padding: 0 20px;
+	}
+    &__form {
+        display: flex;
+		@media only screen and (max-width: 600px) {
+			display: block;
+		}
+        &-group {
+            margin: 0 10px 0 0;
+			@media only screen and (max-width: 600px) {
+				margin: 0 10px 10px 0;
+			}
+            &:last-child {
+                margin: 0 0 0 0;
+            }
+        }
+    }
+    &__loader {
+        color: #233267;
+        font-size: 26px;
+        height: 42px;
+        line-height: 42px;
+    }
+}

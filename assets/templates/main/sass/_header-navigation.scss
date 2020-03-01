@@ -1,0 +1,112 @@
+.header {
+    &__navigation {
+        height: auto;
+        overflow: hidden;
+        padding: 4px 0 0 0;
+        transition: height 0.1s linear;
+        @media only screen and (max-width: 720px) {
+            display: block;
+            padding: 0 0 0 0;
+        }
+        @media only screen and (max-width: 600px) {
+            display: block;
+            width: 100%;
+        }
+        @media only screen and (max-width: 360px) {
+            display: block;
+            width: 100%;
+        }
+        &--collapsed {
+            display: none !important;
+            height: 0 !important;
+        }
+        &-ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            @media only screen and (max-width: 720px) {
+                display: block;
+            }
+            @media only screen and (max-width: 600px) {
+                display: block;
+            }
+            @media only screen and (max-width: 360px) {
+                display: block;
+            }
+        }
+        &-li {
+            display: block;
+            float: left;
+            margin: 0;
+            overflow: hidden;
+            padding: 0 0;
+            @media only screen and (max-width: 720px) {
+                display: block;
+                float: none;
+                text-align: center;
+            }
+            @media only screen and (max-width: 600px) {
+                display: block;
+                float: none;
+                text-align: center;
+            }
+            @media only screen and (max-width: 360px) {
+                display: block;
+                float: none;
+                text-align: center;
+            }
+        }
+        &-a {
+            color: $color-second;
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 15px 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:focus {
+                color: $color-second--hover;
+                outline: none;
+            }
+            @media only screen and (max-width: 600px) {}
+            @media only screen and (max-width: 360px) {}
+            &:hover {
+                color: $color-second--hover;
+            }
+            &--active {
+                color: $color-second--hover;
+            }
+        }
+        &-toggle-wrapper {
+            display: none;
+            padding: 16px 8px;
+            @media only screen and (max-width: 720px) {
+                text-align: center;
+            }
+            @media only screen and (max-width: 600px) {
+                text-align: center;
+            }
+            @media only screen and (max-width: 360px) {
+                text-align: center;
+            }
+        }
+        &-toggle {
+            background-color: transparent;
+            border: 0;
+            color: #003d70;
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 0 7px;
+            &:focus {
+                color: #ff5365;
+                outline: none;
+            }
+            &:hover {
+                color: #ff5365;
+            }
+        }
+    }
+}

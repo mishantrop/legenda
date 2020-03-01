@@ -1,0 +1,88 @@
+.footer-navigation {
+	/*display: table;
+    align-items: flex-end;
+    display: flex;
+    flex-grow: 9;*/
+    padding: 0 10px;
+	@media only screen and (max-width: 600px) {
+		display: block;
+	    padding: 0 0 20px 0;
+	}
+	@media only screen and (max-width: 480px) {
+		display: block;
+	    padding: 0 0 20px 0;
+	}
+	@media only screen and (max-width: 360px) {
+		display: block;
+	    padding: 0 0 20px 0;
+	}
+    &__row {
+		display: table;
+        display: flex;
+        justify-content: center;
+		@media only screen and (max-width: 720px) {
+			display: block;
+		}
+		@media only screen and (max-width: 600px) {
+			display: block;
+		}
+		@media only screen and (max-width: 480px) {
+			display: block;
+		}
+		@media only screen and (max-width: 360px) {
+			display: block;
+		}
+    }
+    &__col {}
+    &__ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+		@media only screen and (max-width: 600px) {
+        	padding: 10px 0 0 0;
+		}
+		@media only screen and (max-width: 480px) {
+        	padding: 10px 0 0 0;
+		}
+		@media only screen and (max-width: 360px) {
+        	padding: 10px 0 0 0;
+		}
+    }
+    &__li {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__link {
+        color: #fff;
+        display: block;
+		font-size: 15px;
+        padding: 10px 35px 0 35px;
+        text-decoration: none;
+		&:focus {
+			color: #7dc6bd;
+			outline: none;
+		}
+        &:hover {
+            color: #7dc6bd;
+        }
+		@media only screen and (max-width: 1024px) {
+        	padding: 10px 10px 0 10px;
+		}
+		@media only screen and (max-width: 720px) {
+			font-size: 1rem;
+        	padding: 10px 10px 0 10px;
+		}
+        @media only screen and (max-width: 600px) {
+			font-size: 1rem;
+            text-align: center;
+        }
+		@media only screen and (max-width: 480px) {
+        	padding: 0 0 10px 0;
+		}
+		@media only screen and (max-width: 360px) {
+        	padding: 0 0 10px 0;
+		}
+    }
+}

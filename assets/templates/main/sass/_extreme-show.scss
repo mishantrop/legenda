@@ -1,0 +1,29 @@
+.extreme-show {
+	&-masthead {
+		background-image: url('../images/extreme-show/masthead.svg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 50px 20px 360px 20px;
+		&__caption {
+			&--1 {
+				color: #fff;
+				display: block;
+				font-size: 40px;
+				font-weight: normal;
+				margin: 0 0 4px 0;
+				padding: 0 0 0 0;
+				text-align: center;
+			}
+			&--2 {
+				color: #fff;
+				display: block;
+				font-size: 17px;
+				font-weight: normal;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				text-align: center;
+			}
+		}
+	}
+}

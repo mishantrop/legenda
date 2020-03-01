@@ -1,0 +1,40 @@
+.modal {
+	&--wide {
+		max-width: 1000px;
+		@media only screen and (max-width: 1280px) {
+			max-width: 80%;
+		}
+	}
+    &__close {
+        background-color: transparent;
+        border: none;
+        color: $color-second--hover;
+        display: block;
+        float: right;
+        font-weight: bold;
+        padding: 15px;
+        @include outline();
+        &:hover {
+            color: $color-fourth;
+        }
+    }
+    &__content {
+        padding: 15px 5rem;
+		text-align: left;
+		@media only screen and (max-width: 360px) {
+			padding: 20px;
+		}
+    }
+    &__inner {}
+    &__header {
+        color: $color-fourth;
+        font-size: 30px;
+        font-weight: normal;
+        padding: 15px 4rem;
+        text-transform: uppercase;
+		@media only screen and (max-width: 360px) {
+			font-size: 18px;
+			padding: 20px;
+		}
+    }
+}

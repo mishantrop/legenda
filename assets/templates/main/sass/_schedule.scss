@@ -1,0 +1,90 @@
+.schedule {
+    background-color: #f0f4f4;
+    margin: 0 0 40px 0;
+    padding: 0 50px;
+    &-course {
+        &__content {
+            background-color: #1c3069;
+            color: #fff;
+            font-size: 15px;
+            max-height: 0;
+            overflow: hidden;
+			padding: 0 50px 0 50px;
+            transition: max-height 0.1s linear;
+            &--expanded {
+                max-height: 99999px;
+                padding: 20px 50px 20px 50px;
+				transition: max-height 0.1s ease-in;
+            }
+            table {
+                border: none;
+                border-collapse: collapse;
+                width: 100%;
+                tr {
+                    background-color: #1c3069;
+                    border: none;
+                    color: #fff;
+                    &:first-child {
+                        td {
+                            background-color: #fff;
+                            border: 1px solid #fff;
+                            color: #1c3069;
+                            font-size: 17px;
+                            font-weight: 500;
+                            padding: 15px 30px;
+                            text-align: left;
+                        }
+                    }
+                    td {
+                        border: 1px solid #fff;
+                        padding: 15px 30px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        &__header {
+            background-color: #fff;
+            color: #1c3069;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 0 0 1px 0;
+            padding: 10px 10px 10px 50px;
+            &:hover {
+                background-color: #eee;
+            }
+            &--expanded {
+                .schedule-course__header-arrow {
+                    -ms-transform: rotate(90deg);
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+            &-arrow {
+                color: $color-second--hover;
+                display: inline-block;
+                height: 18px;
+                text-align: center;
+                vertical-align: middle;
+                width: 18px;
+                -webkit-transition: -webkit-transform .1s ease-in-out;
+                transition: transform .1s ease-in-out;
+            }
+        }
+    }
+    &-type {
+        &__courses {}
+        &__header {
+            background-color: #fff;
+            color: #1c3069;
+            cursor: default;
+            font-size: 30px;
+            line-height: 1;
+            margin: 0 0 0 0;
+            padding: 30px 10px 10px 50px;
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+}

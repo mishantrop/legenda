@@ -1,0 +1,164 @@
+.header {
+    background-color: #f0f4f4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 30px 30px 30px;
+    
+    @media only screen and (max-width: 1366px) {}
+    
+    @media only screen and (max-width: 1280px) {}
+  	
+    @media only screen and (max-width: 1200px) {
+  		display: block;
+  	}
+    
+    @media only screen and (max-width: 992px) {
+        display: block;
+        padding: 24px 40px 24px 40px;
+    }
+  	
+    @media only screen and (max-width: 720px) {
+          display: block;
+  		padding: 24px 20px 24px 20px;
+  	}
+    @media only screen and (max-width: 600px) {
+        display: block;
+        padding: 24px 40px 24px 40px;
+    }
+    @media only screen and (max-width: 360px) {
+        display: block;
+    }
+    &__contacts {
+        overflow: hidden;
+        padding: 0 0 0 0;
+        @media only screen and (max-width: 1200px) {
+            display: block;
+            overflow: visible;
+        }
+        @media only screen and (max-width: 1024px) {
+            display: block;
+            overflow: visible;
+        }
+        @media only screen and (max-width: 720px) {
+            display: block;
+            overflow: visible;
+        }
+        @media only screen and (max-width: 600px) {
+            display: block;
+            overflow: visible;
+        }
+        @media only screen and (max-width: 360px) {
+            display: block;
+            overflow: visible;
+        }
+        &--1 {
+            float: left;
+            @media only screen and (max-width: 992px) {
+                /*float: none;*/
+            }
+            @media only screen and (max-width: 960px) {
+                float: none;
+            }
+        }
+        &--2 {
+            overflow: hidden;
+            padding: 0 0 0 20px;
+        }
+        &--3 {
+            overflow: hidden;
+            padding: 0 0 0 20px;
+        }
+        &-row {
+            display: flex;
+            overflow: hidden;
+            @media only screen and (max-width: 1200px) {
+                display: block;
+            }
+            @media only screen and (max-width: 992px) {
+                display: block;
+            }
+        }
+        &-col {
+            padding: 0 0 0 0;
+            text-align: center;
+            @media only screen and (max-width: 1200px) {
+                padding: 0 1rem 0 1rem;
+            }
+            @media only screen and (max-width: 992px) {
+                padding: 0 1rem 0 1rem;
+            }
+            @media only screen and (max-width: 360px) {
+                padding: 0 0 1rem 0;
+            }
+        }
+    }
+    &-container {
+        border-bottom: 1px solid #f00;
+    }
+    &__order-call {
+        @include gay-gradient();
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+        padding: 6px 28px;
+        text-transform: lowercase;
+        &:active {
+            outline: none;
+        }
+        &:focus {
+            @include gay-gradient-hover();
+            outline: none;
+        }
+        &:hover {
+            @include gay-gradient-hover();
+        }
+        @media only screen and (max-width: 1200px) {
+            margin: 0 auto 0 auto;
+        }
+        @media only screen and (max-width: 1024px) {
+            margin: 0 auto 0 auto;
+        }
+		@media only screen and (max-width: 992px) {
+            margin: 1rem auto 0 auto;
+        }
+		@media only screen and (max-width: 720px) {
+			margin: 1rem auto 0 auto;
+		}
+		@media only screen and (max-width: 600px) {
+			margin: 1rem auto 0 auto;
+		}
+		@media only screen and (max-width: 360px) {
+			margin: 0 auto;
+		}
+    }
+    &__phone {
+        color: #1c3069;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: normal;
+        margin: 0 0 10px 0;
+        text-decoration: none;
+        &:focus {
+            color: $color-second;
+            outline: none;
+        }
+        &:hover {
+            color: $color-second;
+        }
+		@media only screen and (max-width: 992px) {
+            margin: 1rem 0 0 0;
+        }
+		@media only screen and (max-width: 720px) {
+			margin: 1rem auto 0 auto;
+		}
+        @media only screen and (max-width: 600px) {
+             margin: 20px 0 0 0;
+        }
+        @media only screen and (max-width: 360px) {
+            margin: 20px 0 10px 0;
+        }
+    }
+}

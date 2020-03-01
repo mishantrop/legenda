@@ -1,0 +1,91 @@
+.brute-group-form {
+    max-width: 900px;
+    margin: 0 auto;
+    &__checkbox {
+        @include gay-gradient();
+        border-radius: 2px;
+        border: 1px solid $color-second--hover;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 10px 0 0;
+        text-align: center;
+        width: 30px;
+		&:hover {
+			@include gay-gradient-hover();
+		}
+        &--off {
+            @include gay-gradient-disabled();
+            border: 1px solid #bbb;
+			&:hover {
+				@include gay-gradient-disabled();
+			}
+            i.fa {
+                color: #eee;
+            }
+        }
+        i.fa {
+            color: #fff;
+        }
+    }
+    &__label {
+        display: block;
+        font-weight: normal;
+        margin: 0 0 5px 0;
+        text-align: left;
+        &--checkbox {
+            line-height: 30px;
+        }
+        a {
+            color: $color-fifth;
+            &:hover {
+                color: $color-second--hover;
+            }
+        }
+        sup {
+            /*color: $main-color;*/
+        }
+    }
+    &__input {
+        @include gay-input();
+        resize: none;
+        width: 100%;
+        &--invalid {
+            border: 1px solid $color-second--hover;
+        }
+        @include outline-input();
+        @include placeholder();
+    }
+    &__submit {
+        @include gay-gradient();
+        border: none;
+        border-radius: 25px;
+        color: #fff;
+        display: block;
+        font-size: 15px;
+        font-weight: normal;
+        padding: 16px 28px;
+        text-transform: uppercase;
+        width: 100%;
+        &:disabled {
+            @include gay-gradient-disabled();
+            &:hover {
+                @include gay-gradient-disabled-hover();
+            }
+        }
+        &:active {
+            outline: none;
+        }
+        &:focus {
+            @include gay-gradient-hover();
+            outline: none;
+        }
+        &:hover {
+            @include gay-gradient-hover();
+        }
+    }
+    &__form-group {
+        margin: 0 0 1rem 0;
+        padding: 0 5px;
+    }
+}

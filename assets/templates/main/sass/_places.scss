@@ -1,0 +1,58 @@
+.places {
+    &-info {
+        background-color: #fff;
+        padding: 30px 50px 20px 50px;
+        @media only screen and (max-width: 360px) {
+            padding: 20px 20px 20px 20px;
+        }
+        &__title {
+            color: $color-fourth;
+            font-size: 30px;
+            font-weight: 400;
+            margin: 0 0 20px 0;
+            padding: 0 0 0 0;
+        }
+        &__text {
+            color: #000;
+            font-size: 16px;
+            padding: 0 50px 0 0;
+            @media only screen and (max-width: 360px) {
+				padding: 0 0 0 0;
+			}
+        }
+        &__places-count-title {
+            color: $color-fifth;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0 0 15px 0;
+        }
+        &__places-mode {
+            background-color: #f0f4f4;
+            border-radius: 20px;
+            border: none;
+            color: #1c3069;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0 0 10px 0;
+            padding: 8px 50px;
+            text-transform: uppercase;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                background-color: #1c3069;
+                color: #fff;
+            }
+            &--active {
+                background-color: #1c3069;
+                color: #fff;
+            }
+        }
+    }
+    &-map {
+        height: 480px;
+        &-wrapper {
+            margin: 0 0 0 0;
+        }
+    }
+}

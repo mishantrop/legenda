@@ -1,0 +1,160 @@
+.course {
+    &-content {
+        background-color: #fff;
+        padding: 40px 60px 20px 60px;
+		@media only screen and (max-width: 720px) {
+        	padding: 20px 20px 20px 20px;
+		}
+        &__text {
+            font-size: 15px;
+            padding: 0 1rem 1rem 0;
+			@media only screen and (max-width: 720px) {
+            	padding: 0 0 1rem 0;
+			}
+			p {
+	        	line-height: 1.5;
+				&:first-child {
+					margin: 0 0 1rem 0;
+				}
+				&:last-child {
+					margin: 1rem 0 0 0;
+				}
+			}
+			a {
+				color: $color-fifth;
+				&:hover {
+					color: $color-second--hover;
+				}
+			}
+			h2 {
+				color: $color-fifth;
+	            font-size: 30px;
+	            font-weight: normal;
+			}
+			h3 {
+				color: $color-fifth;
+	            font-size: 25px;
+	            font-weight: normal;
+			}
+			h4 {
+				color: $color-fifth;
+	            font-size: 20px;
+	            font-weight: normal;
+			}
+        }
+    }
+    &-legend {
+        &-level {
+            border-bottom: 1px solid #f0f4f4;
+            margin: 0 0 20px 0;
+            padding: 0 0 15px 0;
+            &__title {
+                color: #a4b2c2;
+                margin: 0 0 15px 0;
+            }
+            &__levels {
+                color: #000;
+            }
+        }
+        &-rases {
+            &__title {
+                color: #a4b2c2;
+                margin: 0 0 15px 0;
+            }
+            &__races {
+                color: #000;
+            }
+        }
+        &-rase {
+            float: left;
+            margin: 0 5px;
+            overflow: hidden;
+            &__title {
+                color: #000;
+                font-size: 15px;
+                font-weight: 500;
+                text-align: center;
+            }
+            &-image {
+                max-height: 100%;
+                max-width: 100%;
+                &--adult {
+                    fill: #82dbd8;
+                    stroke: #82dbd8;
+                    path {
+                        stroke: #82dbd8;
+                    }
+                }
+                &--children {
+                    fill: #f75266;
+                    stroke: #f75266;
+                    path {
+                        stroke: #f75266;
+                    }
+                }
+                &--family {
+                    fill: #02b6e7;
+                    stroke: #02b6e7;
+                    path {
+                        stroke: #02b6e7;
+                    }
+                }
+                &--mothers {
+                    fill: $color-second--hover;
+                    stroke: $color-second--hover;
+                    path {
+                        stroke: #f7f4dc;
+                    }
+                }
+                &-wrapper {
+                    background-color: #f0f4f4;
+                    border-radius: 30px;
+                    height: 60px;
+                    margin: 0 auto 0 auto;
+                    min-width: 60px;
+                    padding: 10px;
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+
+.course-block-1 {
+    background-color: #13234f;
+    padding: 30px 50px;
+	@media only screen and (max-width: 720px) {
+		padding: 20px 20px 20px 20px;
+	}
+}
+
+.course-legend-race-image {
+    &--adult {
+        fill: #82dbd8;
+        stroke: #82dbd8;
+        path {
+            stroke: #82dbd8;
+        }
+    }
+    &--children {
+        fill: #f75266;
+        stroke: #f75266;
+        path {
+            stroke: #f75266;
+        }
+    }
+    &--family {
+        fill: #02b6e7;
+        stroke: #02b6e7;
+        path {
+            stroke: #02b6e7;
+        }
+    }
+    &--mothers {
+        fill: #f7f4dc;
+        stroke: #f7f4dc;
+        path {
+            stroke: #f7f4dc;
+        }
+    }
+}

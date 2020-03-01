@@ -1,0 +1,26 @@
+.course-legend-level-bar {
+	margin: 0 0 15px 0;
+	overflow: hidden;
+	width: 170px;
+    &__fill {
+        background-color: #7dc6bd;
+		border-radius: 2px;
+		float: left;
+		height: 5px;
+		width: 80px;
+    }
+    &__separator {
+        background-color: #fff;
+		border-radius: 2px;
+		float: left;
+		height: 5px;
+		width: 10px;
+    }
+    &__space {
+        background-color: #f0f4f4;
+		border-radius: 2px;
+		float: left;
+		height: 5px;
+		width: 80px;
+    }
+}

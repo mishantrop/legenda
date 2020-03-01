@@ -1,0 +1,33 @@
+.course-plan {
+	@media only screen and (max-width: 720px) {
+		padding: 20px 0 0 0;
+	}
+	@media only screen and (max-width: 600px) {
+		padding: 20px 0 0 0;
+	}
+	&__header {
+		color: #1c3069;
+		font-size: 20px;
+		font-weight: normal;
+		margin: 0 0 15px 0;
+		padding: 0 0 0 0;
+	}
+	&__text {
+		color: #000;
+		font-size: 16px;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				margin: 0 0 0 0;
+				padding: 4px 0 4px 0;
+			}
+			li::before {
+				content: "•";
+				color: $color-second--hover;
+				padding: 0 4px;
+			}
+		}
+	}
+}

@@ -1,0 +1,112 @@
+.course-groups {
+    @media only screen and (max-width: 1290px) {
+        padding: 0 20px;
+    }
+    @media only screen and (max-width: 1200px) {
+        padding: 0 20px;
+    }
+    @media only screen and (max-width: 720px) {
+        padding: 0 20px;
+    }
+    @media only screen and (max-width: 480px) {
+        padding: 0 20px;
+    }
+    @media only screen and (max-width: 360px) {
+        padding: 0 20px;
+    }
+}
+
+.course-group {
+    background-color: #fff;
+    margin: 0 0 20px 0;
+    padding: 30px 50px;
+    @media only screen and (max-width: 480px) {
+        padding: 20px 20px;
+    }
+    @media only screen and (max-width: 360px) {
+        padding: 20px 20px;
+    }
+    &-info1 {
+        padding: 0 0 10px 0;
+        &__course-startdate {
+            margin: 0 0 15px 0;
+        }
+        &__course {
+            color: #1c3069;
+            font-size: 20px;
+            &-link {
+                color: #1c3069;
+                text-decoration: none;
+                &:hover {
+                    color: $color-second--hover;
+                }
+            }
+        }
+        &__startdate {
+            color: $color-second--hover;
+            font-size: 20px;
+        }
+        &__date {
+            color: #000;
+            font-size: 16px;
+            margin: 0 0 10px 0;
+            i.fa {
+                color: $color-second--hover;
+                padding: 0 10px 0 0;
+            }
+        }
+        &__place {
+            color: #000;
+            font-size: 16px;
+            margin: 0 0 10px 0;
+            i.fa {
+                color: $color-second--hover;
+                padding: 0 10px 0 0;
+            }
+        }
+    }
+    &-info2 {
+        border-top: 1px solid #f0f4f4;
+        padding: 10px 0 10px 0;
+        &__rases {
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: lowercase;
+        }
+        &__rase {
+            min-height: 50px;
+            padding: 5px 0 0 0;
+            &-title {
+                color: #a4b2c2;
+                font-size: 13px;
+                font-weight: 500;
+                margin: 0 0 8px 0;
+            }
+        }
+    }
+    &-info3 {
+        padding: 10px 0 0 0;
+        &__order {
+            @include gay-gradient();
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            display: block;
+            font-size: 15px;
+            font-weight: normal;
+            padding: 16px 28px;
+            text-transform: uppercase;
+            width: 100%;
+            &:active {
+                outline: none;
+            }
+            &:focus {
+                @include gay-gradient-hover();
+                outline: none;
+            }
+            &:hover {
+                @include gay-gradient-hover();
+            }
+        }
+    }
+}

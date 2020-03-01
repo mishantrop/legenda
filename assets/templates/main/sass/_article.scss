@@ -1,0 +1,92 @@
+.article {
+    margin: 0 0 20px 0;
+    &-container {
+        padding: 0 20px;
+    }
+    &-header {
+        background-color: #13234f;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 260px;
+        overflow: hidden;
+        position: relative;
+		@media only screen and (max-width: 480px) {
+			min-height: auto;
+			position: static;
+		}
+		@media only screen and (max-width: 360px) {
+			min-height: auto;
+			position: static;
+		}
+        &__background {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            opacity: 0.5;
+            position: absolute;
+            width: 100%;
+			@media only screen and (max-width: 480px) {
+				position: static;
+			}
+			@media only screen and (max-width: 360px) {
+				position: static;
+			}
+        }
+		&__content {
+			padding: 30px 60px;
+			position: absolute;
+			width: 100%;
+			@media only screen and (max-width: 480px) {
+				padding: 20px 20px;
+				position: static;
+			}
+			@media only screen and (max-width: 360px) {
+				padding: 20px 20px;
+				position: static;
+			}
+		}
+        &__title {
+            color: #fff;
+            font-size: 35px;
+            font-weight: normal;
+            margin: 0 0 0 0;
+            text-shadow: #001 1px 1px 1px;
+        }
+        &__subtitle {
+            color: #fff;
+            font-size: 15px;
+            font-weight: normal;
+            text-shadow: #001 1px 1px 1px;
+        }
+    }
+    &-text {
+        background-color: #fff;
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 20px;
+		a {
+			color: $color-fifth;
+			&:hover {
+				color: $color-second--hover;
+			}
+		}
+		h2 {
+			color: $color-fifth;
+            font-size: 30px;
+            font-weight: normal;
+		}
+		h3 {
+			color: $color-fifth;
+            font-size: 25px;
+            font-weight: normal;
+		}
+		h4 {
+			color: $color-fifth;
+            font-size: 20px;
+            font-weight: normal;
+		}
+		img {
+			max-width: 100%;
+		}
+    }
+}

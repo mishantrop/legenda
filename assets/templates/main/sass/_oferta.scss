@@ -1,0 +1,44 @@
+.oferta {
+    margin: 0 0 20px 0;
+    &-container {
+        padding: 0 20px;
+    }
+    &-header {
+        background-color: #fff;
+		padding: 10px 20px;
+        &__title {
+            color: $color-fifth;
+            font-size: 35px;
+            font-weight: normal;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+    }
+    &-text {
+        background-color: #fff;
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 20px;
+		a {
+			color: $color-fifth;
+			&:hover {
+				color: $color-second--hover;
+			}
+		}
+		h2 {
+			color: $color-fifth;
+            font-size: 30px;
+            font-weight: normal;
+		}
+		h3 {
+			color: $color-fifth;
+            font-size: 25px;
+            font-weight: normal;
+		}
+		h4 {
+			color: $color-fifth;
+            font-size: 20px;
+            font-weight: normal;
+		}
+    }
+}

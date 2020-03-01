@@ -1,0 +1,39 @@
+.courses-categories {
+	background-color: #fff;
+	& > .container {
+	    display: flex;
+	    justify-content: center;
+		@media only screen and (max-width: 600px) {
+			display: block;
+		}
+	}
+	@media only screen and (max-width: 600px) {
+		padding: 0 20px;
+	}
+	&-item {
+		padding: 23px 0;
+		@media only screen and (max-width: 600px) {
+			padding: 10px 0;
+		}
+		&__link {
+			color: $color-fourth;
+			display: block;
+			font-size: 16px;
+			font-weight: 500;
+			padding: 0 15px;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:hover {
+				color: #7dc6bd;
+			}
+			&--active {
+				border-bottom: 5px solid $color-second--hover;
+				color: $color-second--hover;
+				&:hover {
+					border-bottom: 5px solid #7dc6bd;
+					color: #7dc6bd;
+				}
+			}
+		}
+	}
+}

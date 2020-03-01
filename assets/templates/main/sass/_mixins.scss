@@ -1,0 +1,162 @@
+@mixin inline-block($valign) {
+    display: inline-block;
+    vertical-align: $valign;
+}
+
+@mixin transition {
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+
+@mixin transitionheight {
+    -webkit-transition: height 1s ease-out 0.5s;
+    -moz-transition: height 1s ease-out 0.5s;
+    -o-transition: height 1s ease-out 0.5s;
+    transition: height 1s ease-out 0.5s;
+}
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+@mixin gay-gradient() {
+    background-color: $color-second--hover;
+    background-image: -moz-linear-gradient(left, #ff5365 0%, #ea875b 100%);
+    background-image: -webkit-linear-gradient(left, #ff5365 0%, #ea875b 100%);
+    background-image: linear-gradient(to right, #ff5365 0%, #ea875b 100%);
+}
+
+@mixin gay-gradient-hover() {
+    background-color: #ff6877;
+    background-image: -moz-linear-gradient(left, #ff6877 0%, #e89571 100%);
+    background-image: -webkit-linear-gradient(left, #ff6877 0%, #e89571 100%);
+    background-image: linear-gradient(to right, #ff6877 0%, #e89571 100%);
+}
+
+@mixin gay-gradient-disabled() {
+    background-color: #ddd;
+    background-image: -moz-linear-gradient(left, #ccc 0%, #ddd 100%);
+    background-image: -webkit-linear-gradient(left, #ccc 0%, #ddd 100%);
+    background-image: linear-gradient(to right, #ccc 0%, #ddd 100%);
+}
+
+@mixin gay-gradient-disabled-hover() {
+    background-color: #ddd;
+    background-image: -moz-linear-gradient(left, #ccc 0%, #ddd 100%);
+    background-image: -webkit-linear-gradient(left, #ccc 0%, #ddd 100%);
+    background-image: linear-gradient(to right, #ccc 0%, #ddd 100%);
+}
+
+@mixin gay-input() {
+	background-color: #f0f4f4;
+	border: 1px solid #d5dce6;
+	border-radius: 20px;
+	font-size: 15px;
+	overflow: hidden;
+	padding: 10px 20px;
+}
+
+@mixin outline() {
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin outline-input() {
+    &:focus {
+        border: 1px solid $color-fourth;
+        outline: none;
+    }
+}
+
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        color: #aaa;
+    }
+    &::-moz-placeholder {
+        color: #aaa;
+		text-overflow: ellipsis;
+    }
+    &:-moz-placeholder {
+        color: #aaa;
+	    text-overflow: ellipsis;
+    }
+    &:-ms-input-placeholder {
+        color: #aaa;
+		text-overflow: ellipsis;
+    }
+    &[placeholder] {
+        text-overflow: ellipsis;
+    }
+    &:focus::-webkit-input-placeholder {
+        color: transparent
+    }
+    &:focus::-moz-placeholder {
+        color: transparent
+    }
+    &:focus:-moz-placeholder {
+        color: transparent
+    }
+    &:focus:-ms-input-placeholder {
+        color: transparent
+    }
+}
+
+@mixin inputsize() {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    @media only screen and (max-width: 1280px) {
+        height: 50px;
+        line-height: 50px;
+    }
+    @media only screen and (max-width: 992px) {
+        height: 40px;
+        line-height: 40px;
+    }
+    @media only screen and (max-width: 768px) {
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+@mixin buttonsize() {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+    @media only screen and (max-width: 1280px) {
+        height: 50px;
+        line-height: 50px;
+    }
+    @media only screen and (max-width: 992px) {
+        height: 40px;
+        line-height: 40px;
+    }
+    @media only screen and (max-width: 768px) {
+        height: 30px;
+        line-height: 30px;
+    }
+}

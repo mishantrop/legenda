@@ -1,0 +1,110 @@
+.course-prices {
+	@media only screen and (max-width: 720px) {
+		padding: 20px 0 0 0;
+	}
+	@media only screen and (max-width: 600px) {
+		padding: 20px 0 0 0;
+	}
+    &__header {
+        color: #1c3069;
+        font-size: 20px;
+        font-weight: normal;
+        margin: 0 0 15px 0;
+        padding: 0 0 0 0;
+    }
+    &__box {
+        border: 1px solid #9cb7be;
+        padding: 20px 20px;
+    }
+    &__addition {
+        color: #9cb7be;
+        font-size: 16px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+		@media only screen and (max-width: 480px) {
+        	padding: 10px 0 0 0;
+			text-align: center;
+		}
+		@media only screen and (max-width: 360px) {
+        	padding: 10px 0 0 0;
+			text-align: center;
+		}
+    }
+    &-item {
+        margin: 0 0 10px 0;
+        overflow: hidden;
+        &__description {
+            color: #000;
+            display: block;
+            float: left;
+            font-size: 16px;
+			@media only screen and (max-width: 480px) {
+				float: none;
+				text-align: center;
+			}
+			@media only screen and (max-width: 360px) {
+				float: none;
+				text-align: center;
+			}
+        }
+        &__value {
+            color: $color-second--hover;
+            display: block;
+            float: left;
+            font-size: 20px;
+            min-width: 80px;
+			@media only screen and (max-width: 480px) {
+				float: none;
+				min-width: auto;
+				text-align: center;
+				width: 100%;
+			}
+			@media only screen and (max-width: 360px) {
+				float: none;
+				min-width: auto;
+				text-align: center;
+				width: 100%;
+			}
+        }
+    }
+}
+
+.course-discounts {
+    &-item {
+        margin: 0 0 8px 0;
+        overflow: hidden;
+        &__description {
+            color: #9cb7be;
+            display: block;
+            float: left;
+            font-size: 16px;
+			@media only screen and (max-width: 480px) {
+				float: none;
+				text-align: center;
+			}
+			@media only screen and (max-width: 360px) {
+				float: none;
+				text-align: center;
+			}
+        }
+        &__value {
+            color: $color-fourth;
+            display: block;
+            float: left;
+            font-size: 15px;
+            min-width: 80px;
+			@media only screen and (max-width: 480px) {
+				float: none;
+				min-width: auto;
+				text-align: center;
+				width: 100%;
+			}
+			@media only screen and (max-width: 360px) {
+				float: none;
+				min-width: auto;
+				text-align: center;
+				width: 100%;
+			}
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.index-workflow-mobile {
+    display: none;
+    margin: 0 0 40px 0;
+    padding: 20px 20px;
+    @media only screen and (max-width: 992px) {
+        display: block;
+		margin: 0 0 0 0;
+    }
+    &__header {
+        color: $color-fourth;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+		padding: 10px 10px 10px 50px;
+        @media only screen and (max-width: 360px) {
+			padding: 10px 10px 10px 10px;
+		}
+    }
+    &-item {
+        &__header {
+            background-color: #fff;
+            color: #1c3069;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 0 0 1px 0;
+            padding: 10px 10px 10px 50px;
+			@media only screen and (max-width: 360px) {
+				padding: 10px 10px 10px 10px;
+			}
+            &:hover {
+                background-color: #eee;
+            }
+            &--expanded {
+                .index-workflow-mobile-item__header-arrow {
+                    -ms-transform: rotate(90deg);
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+            &-arrow {
+                color: $color-second--hover;
+                display: inline-block;
+                height: 18px;
+                text-align: center;
+                vertical-align: middle;
+                width: 18px;
+                -webkit-transition: -webkit-transform 0.1s linear;
+                transition: transform 0.1s linear;
+            }
+        }
+        &__content {
+            background-color: #1c3069;
+            color: #fff;
+            font-size: 15px;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 50px 0 50px;
+            transition: max-height 0.1s linear;
+            a {
+                color: #fff;
+                &:hover {
+                    color: #7dc6bd;
+                }
+            }
+            &--expanded {
+                max-height: 99999px;
+                padding: 20px 50px 20px 50px;
+                transition: max-height 0.1s linear;
+				@media only screen and (max-width: 360px) {
+	            	padding: 5px 20px 5px 20px;
+				}
+				p {
+					line-height: 1.5;
+				}
+            }
+        }
+    }
+}

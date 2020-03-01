@@ -1,0 +1,104 @@
+.course-type {
+    background-color: #82dbd8;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 20px 60px;
+    text-decoration: none;
+    &:hover {
+        .course-type__title {
+            color: $color-second;
+            text-shadow: none;
+        }
+        .course-type__subtitle {
+            color: $color-second;
+            text-shadow: none;
+        }
+    }
+    &--16 {
+        background-image: url('../images/courses-types/roliki.svg');
+        height: 330px;
+		@media only screen and (max-width: 992px) {
+			height: 560px;
+		}
+		@media only screen and (max-width: 720px) {
+			height: 420px;
+		}
+		@media only screen and (max-width: 600px) {
+			height: 340px;
+		    padding: 20px 20px;
+		}
+    }
+    &--17 {
+        background-image: url('../images/courses-types/skeit.svg');
+        height: 330px;
+		@media only screen and (max-width: 992px) {
+			height: 560px;
+		}
+		@media only screen and (max-width: 720px) {
+			height: 420px;
+		}
+		@media only screen and (max-width: 600px) {
+			height: 340px;
+		    padding: 20px 20px;
+		}
+    }
+    &--18 {
+        background-image: url('../images/courses-types/bike.svg');
+        height: 260px;
+		@media only screen and (max-width: 992px) {
+			height: 560px;
+		}
+		@media only screen and (max-width: 720px) {
+			height: 420px;
+		}
+		@media only screen and (max-width: 600px) {
+			height: 340px;
+		    padding: 20px 20px;
+		}
+    }
+    &--19 {
+        background-image: url('../images/courses-types/samokat.svg');
+        height: 260px;
+		@media only screen and (max-width: 992px) {
+			height: 560px;
+		}
+		@media only screen and (max-width: 720px) {
+			height: 420px;
+		}
+		@media only screen and (max-width: 600px) {
+			height: 340px;
+		    padding: 20px 20px;
+		}
+    }
+    &--20 {
+        background-image: url('../images/courses-types/children.svg');
+        height: 260px;
+		@media only screen and (max-width: 992px) {
+			height: 560px;
+		}
+		@media only screen and (max-width: 720px) {
+			height: 420px;
+		}
+		@media only screen and (max-width: 600px) {
+			height: 340px;
+		    padding: 20px 20px;
+		}
+    }
+    &__title {
+        color: #fff;
+        font-size: 30px;
+        @media only screen and (max-width: 600px) {
+            text-shadow: #065daa 1px 1px 1px;
+        }
+    }
+    &__subtitle {
+        color: #fff;
+        font-size: 15px;
+        @media only screen and (max-width: 600px) {
+            text-shadow: #065daa 1px 1px 1px;
+        }
+    }
+}

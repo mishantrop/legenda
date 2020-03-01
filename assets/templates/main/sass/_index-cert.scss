@@ -1,0 +1,63 @@
+.index-cert {
+    background-image: url('../images/index-cert/index-cert__background.jpg?v=2');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+	padding: 20px 60px 460px 60px;
+	@media only screen and (max-width: 720px) {
+		background-image: none;
+		padding: 20px 20px 20px 20px;
+	}
+	@media only screen and (max-width: 600px) {
+		background-image: none;
+		padding: 20px 60px 20px 60px;
+	}
+	@media only screen and (max-width: 480px) {
+		padding: 20px 20px 20px 20px;
+	}
+	@media only screen and (max-width: 360px) {
+		padding: 20px 20px 20px 20px;
+	}
+    &__header {
+        color: $color-fourth;
+        font-size: 30px;
+        margin: 0 0 20px 0;
+        padding: 0 0 0 0;
+    }
+    &__order {
+        @include gay-gradient();
+        border: none;
+		border-radius: 20px;
+        color: #fff;
+        font-size: 14px;
+		padding: 12px 60px;
+        text-transform: uppercase;
+		
+		&:active {
+			outline: none;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			@include gay-gradient-hover();
+		}
+		@media only screen and (max-width: 480px) {
+			padding: 12px 10px;
+		}
+		@media only screen and (max-width: 360px) {
+			padding: 12px 10px;
+		}
+        &-wrapper {
+			@media only screen and (max-width: 480px) {
+				text-align: center;
+			}
+		}
+    }
+    &__row {}
+    &__text {
+		font-size: 15px;
+		line-height: 1.5;
+        margin: 0 0 20px 0;
+    }
+}

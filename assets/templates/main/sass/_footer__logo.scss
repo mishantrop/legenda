@@ -1,0 +1,30 @@
+.footer__logo {
+	flex-grow: 2;
+	margin: 0 0 0 0;
+	@media only screen and (max-width: 600px) {
+		margin: 0 0 20px 0;
+	}
+	&-image {
+		display: block;
+		&:focus {
+			outline: none;
+		}
+		@media only screen and (max-width: 600px) {
+            margin: 0 auto;
+            max-width: 100%;
+            min-width: 50%;
+			width: auto;
+        }
+	}
+	&-link {
+		display: block;
+		overflow: hidden;
+		margin: 0 0 15px 0;
+		&:focus {
+			outline: none;
+		}
+		@media only screen and (max-width: 600px) {
+			margin: 0 0 20px 0;
+		}
+	}
+}

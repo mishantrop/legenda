@@ -1,0 +1,130 @@
+.index-test {
+    background-color: $color-fourth;
+    padding: 40px 50px;
+	@media only screen and (max-width: 1024px) {
+    	padding: 20px 20px;
+	}
+	@media only screen and (max-width: 360px) {
+		padding: 20px 20px;
+	}
+    .row {
+        .col {
+            padding: 0 10px;
+        }
+    }
+}
+
+.index-test-item {
+    background-color: #2847ae;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    padding: 30px 50px;
+	@media only screen and (max-width: 480px) {
+		padding: 20px 20px;
+	}
+	@media only screen and (max-width: 360px) {
+		padding: 20px 20px;
+	}
+    &__description {
+		border-bottom: 1px solid #223f9a;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0 0 20px 0;
+        padding: 0 0 20px 0;
+    }
+    &__info {
+        overflow: hidden;
+		padding: 0 0 20px 0;
+		@media only screen and (max-width: 480px) {
+			padding: 0 0 0 0;
+		}
+		@media only screen and (max-width: 360px) {
+			padding: 0 0 0 0;
+		}
+        &__left {
+            color: #fff;
+            float: left;
+            font-size: 16px;
+            width: 50%;
+			@media only screen and (max-width: 1024px) {
+				padding: 5px 0;
+				width: 100%;
+			}
+			@media only screen and (max-width: 600px) {
+				padding: 5px 0;
+				width: 100%;
+			}
+            i.fa {
+                color: $color-fourth;
+                display: block;
+                float: left;
+                margin: 0 0.5rem 0 0;
+            }
+        }
+        &__right {
+            color: #fff;
+            float: left;
+            font-size: 16px;
+            width: 50%;
+			@media only screen and (max-width: 1024px) {
+				padding: 5px 0;
+				width: 100%;
+			}
+			@media only screen and (max-width: 600px) {
+				padding: 5px 0;
+				width: 100%;
+			}
+            i.fa {
+                color: $color-fourth;
+                display: block;
+                float: left;
+                margin: 0 0.5rem 0 0;
+            }
+        }
+    }
+    &__more {
+        @include gay-gradient();
+        border: none;
+        border-radius: 25px;
+        color: #fff;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: normal;
+        padding: 16px 80px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+        &:active {
+            outline: none;
+        }
+        &:focus {
+			@include gay-gradient-hover();
+            outline: none;
+        }
+        &:hover {
+            @include gay-gradient-hover();
+        }
+		@media only screen and (max-width: 480px) {
+			padding: 16px 10px;
+			margin: 20px 0 0 0;
+		}
+		@media only screen and (max-width: 360px) {
+			padding: 16px 10px;
+			margin: 20px 0 0 0;
+		}
+        &-wrapper {
+            text-align: center;
+        }
+    }
+    &__pagetitle {
+        color: #fff;
+        display: block;
+        font-size: 30px;
+        margin: 0 0 20px 0;
+    }
+}
