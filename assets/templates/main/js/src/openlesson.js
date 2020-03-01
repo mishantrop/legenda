@@ -1,9 +1,9 @@
 $(function() {
-    var openlessonForm = $('.openlesson-form');
+	var openlessonForm = $('.openlesson-form');
 
-    if (openlessonForm.length == 1) {
-        $(openlessonForm).find('select').niceSelect();
-		
+	if (openlessonForm.length == 1) {
+		$(openlessonForm).find('select').niceSelect();
+
 		$(openlessonForm).on('change', 'input[name="children"]', function(e) {
 			var input = $(this);
 			var value = $(input).val();
@@ -13,5 +13,5 @@ $(function() {
 				$(openlessonForm).find('[data-childage]').fadeOut(128);
 			}
 		});
-    }
+	}
 });

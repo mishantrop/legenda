@@ -3,93 +3,86 @@ console.log('https://quasi-art.ru');
 window.debug = window.location.hash == '#debug';
 
 function initContactsMap() {
-    /**
-     * Доступен ли Google Maps API
-     */
-    if (typeof window.google !== 'object' || window.google === null || typeof window.google.maps !== 'object' || window.google.maps === null) {
-        //console.log('Google maps not loaded');
-        return false;
-    }
+  /**
+   * Доступен ли Google Maps API
+   */
+  if (typeof window.google !== 'object' || window.google === null || typeof window.google.maps !== 'object' || window.google.maps === null) {
+    return false;
+  }
 
-    var mapContainerId = '#contacts-map';
-    var coords = {
-        lat: 57.6127964,
-        lng: 39.9135285
-    };
-    var mapContainer = document.querySelector(mapContainerId);
-    if (typeof mapContainer !== 'object' || mapContainer === null) {
-        //console.log('Map element not found');
-        return false;
-    }
-    var lat = mapContainer.getAttribute('data-lat');
-    var lng = mapContainer.getAttribute('data-lng');
-    if (lat !== null && lng !== null) {
-        coords.lat = parseFloat(lat);
-        coords.lng = parseFloat(lng);
-        //console.debug(coords);
-    }
+  var mapContainerId = '#contacts-map';
+  var coords = {
+    lat: 57.6127964,
+    lng: 39.9135285,
+  };
+  var mapContainer = document.querySelector(mapContainerId);
+  if (typeof mapContainer !== 'object' || mapContainer === null) {
+    return false;
+  }
+  var lat = mapContainer.getAttribute('data-lat');
+  var lng = mapContainer.getAttribute('data-lng');
+  if (lat !== null && lng !== null) {
+    coords.lat = parseFloat(lat);
+    coords.lng = parseFloat(lng);
+  }
 
-    var mapOptions = {
-        zoom: 17,
-        scrollwheel: false,
-        navigationControl: true,
-        mapTypeControl: false,
-        scaleControl: false,
-        center: new google.maps.LatLng(coords.lat, coords.lng)
-    }
-    var map = new google.maps.Map(mapContainer, mapOptions);
+  var mapOptions = {
+    zoom: 17,
+    scrollwheel: false,
+    navigationControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    center: new google.maps.LatLng(coords.lat, coords.lng),
+  };
+  var map = new google.maps.Map(mapContainer, mapOptions);
 
-    var contentString = 'Легенда';
-    var image = 'assets/templates/main/images/contacts-map__marker-image.png';
-    var myLatLng = new google.maps.LatLng(coords.lat, coords.lng);
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
-    var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        //icon: image,
-        optimized: false
-    });
+  var contentString = 'Легенда';
+  var image = 'assets/templates/main/images/contacts-map__marker-image.png';
+  var myLatLng = new google.maps.LatLng(coords.lat, coords.lng);
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    optimized: false,
+  });
 
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map, marker);
-    });
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map, marker);
+  });
 }
 
 function initPlacesMap() {
-	/**
-     * Доступен ли Google Maps API
-     */
-    if (!googleApiAvailable()) {
-        return false;
-    }
+  if (!googleApiAvailable()) {
+    return false;
+  }
 
-    var mapContainerId = '#places-map';
-    var coords = {
-        lat: 54.0001,
-        lng: 55.0001
-    };
-    var mapContainer = document.querySelector(mapContainerId);
-    if (typeof mapContainer !== 'object' || mapContainer === null) {
-        return false;
-    }
-    var lat = mapContainer.getAttribute('data-lat');
-    var lng = mapContainer.getAttribute('data-lng');
-    if (lat !== null && lng !== null) {
-        coords.lat = parseFloat(lat);
-        coords.lng = parseFloat(lng);
-    }
+  var mapContainerId = '#places-map';
+  var coords = {
+    lat: 54.0001,
+    lng: 55.0001,
+  };
+  var mapContainer = document.querySelector(mapContainerId);
+  if (typeof mapContainer !== 'object' || mapContainer === null) {
+    return false;
+  }
+  var lat = mapContainer.getAttribute('data-lat');
+  var lng = mapContainer.getAttribute('data-lng');
+  if (lat !== null && lng !== null) {
+    coords.lat = parseFloat(lat);
+    coords.lng = parseFloat(lng);
+  }
 
-    var mapOptions = {
-        zoom: 10,
-        scrollwheel: false,
-        navigationControl: true,
-        mapTypeControl: false,
-        scaleControl: false,
-        center: new google.maps.LatLng(coords.lat, coords.lng)
-    }
-    var map = new google.maps.Map(mapContainer, mapOptions);
+  var mapOptions = {
+    zoom: 10,
+    scrollwheel: false,
+    navigationControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    center: new google.maps.LatLng(coords.lat, coords.lng),
+  }
+  var map = new google.maps.Map(mapContainer, mapOptions);
 
 	if ('legendaPlaces' in window && typeof window.legendaPlaces == 'object' && window.legendaPlaces !== null) {
 		var markers = [];
@@ -97,13 +90,10 @@ function initPlacesMap() {
 		var avgLat = 0;
 		var avgLng = 0;
 		
-		
-		
-		for (idx in window.legendaPlaces) {
+		for (var idx in window.legendaPlaces) {
 			var place = window.legendaPlaces[idx];
-			avgLat += parseFloat(place.lat/window.legendaPlaces.length)
-			avgLng += parseFloat(place.lng/window.legendaPlaces.length)
-			//var image = 'assets/templates/main/images/contacts-map__marker-image.png';
+			avgLat += parseFloat(place.lat/window.legendaPlaces.length);
+			avgLng += parseFloat(place.lng/window.legendaPlaces.length);
 			var myLatLng = new google.maps.LatLng(parseFloat(place.lat), parseFloat(place.lng));
 			
 			var marker = new google.maps.Marker({
@@ -117,7 +107,7 @@ function initPlacesMap() {
 					infowindow.setContent(window.legendaPlaces[idx].title);
 					infowindow.setOptions({maxWidth: 256});
 					infowindow.open(map, marker);
-				}
+				};
 			}) (marker, idx));
 		}
 		var avgPosition = new google.maps.LatLng(avgLat, avgLng);
@@ -173,8 +163,6 @@ function initInstagramSlider() {
 	});
 }
 
-
-
 function isMobile() {
 	return (parseInt($(window).outerWidth()) < 600);
 }
@@ -187,11 +175,11 @@ function initElementsSameHeight(selector) {
     var windowWidth = $(window).outerWidth();
     $(selector).css('height', 'auto');
     if (!isTablet()) {
-        var maxHeight = 0;
-        $.each($(selector), function(idx, e) {
-            maxHeight = ($(e).outerHeight() > maxHeight) ? $(e).outerHeight() : maxHeight;
-        });
-        $(selector).css('height', maxHeight);
+      var maxHeight = 0;
+      $.each($(selector), function(idx, e) {
+        maxHeight = ($(e).outerHeight() > maxHeight) ? $(e).outerHeight() : maxHeight;
+      });
+      $(selector).css('height', maxHeight);
     } else {
         $(selector).css('height', 'auto');
     }

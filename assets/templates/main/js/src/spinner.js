@@ -1,9 +1,7 @@
 $(function() {
 	$(document).on('click', '.spinner__increase', function(e) {
-		console.log('increase');
 		var button = $(this);
 		var spinner = $(button).parent();
-		var min = parseInt($(spinner).attr('data-min'));
 		var max = parseInt($(spinner).attr('data-max'));
 		var input = $(spinner).find('input');
 		var valueOld = parseInt($(input).val());
@@ -17,7 +15,6 @@ $(function() {
 	});
 
 	$(document).on('click', '.spinner__decrease', function(e) {
-		console.log('decrease');
 		var button = $(this);
 		var spinner = $(button).parent();
 		var min = parseInt($(spinner).attr('data-min'));

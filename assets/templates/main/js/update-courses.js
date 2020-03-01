@@ -5,7 +5,7 @@
  */
 
 const addZero = (n) => {
-    return String('00' + n).slice(-2);
+	return String('00' + n).slice(-2);
 };
 const Super = {};
 Super.state = {};

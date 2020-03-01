@@ -11,13 +11,10 @@
    Remodal's necessary styles
    ========================================================================== */
 
-/* Hide scroll bar */
-
 html.remodal-is-locked {
   overflow: hidden;
-
-  -ms-touch-action: none;
   touch-action: none;
+  -ms-touch-action: none;
 }
 
 /* Anti FOUC */
@@ -27,44 +24,35 @@ html.remodal-is-locked {
   display: none;
 }
 
-/* Necessary styles of the overlay */
-
 .remodal-overlay {
-  position: fixed;
-  z-index: 9999;
-  top: -5000px;
-  right: -5000px;
   bottom: -5000px;
-  left: -5000px;
-
   display: none;
+  left: -5000px;
+  position: fixed;
+  right: -5000px;
+  top: -5000px;
+  z-index: 9999;
 }
-
-/* Necessary styles of the wrapper */
 
 .remodal-wrapper {
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  right: 0;
   bottom: 0;
-  left: 0;
   display: none;
+  left: 0;
   overflow: auto;
+  position: fixed;
+  right: 0;
   text-align: center;
+  top: 0;
+  z-index: 10000;
   -webkit-overflow-scrolling: touch;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-left: -0.05em;
+  }
 }
-
-.remodal-wrapper:after {
-  display: inline-block;
-
-  height: 100%;
-  margin-left: -0.05em;
-
-  content: "";
-}
-
-/* Fix iPad, iPhone glitches */
 
 .remodal-overlay,
 .remodal-wrapper {
@@ -72,19 +60,14 @@ html.remodal-is-locked {
   backface-visibility: hidden;
 }
 
-/* Necessary styles of the modal dialog */
-
 .remodal {
-  position: relative;
-
   outline: none;
-
+  position: relative;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
 .remodal-is-initialized {
-  /* Disable Anti-FOUC */
   display: inline-block;
 }

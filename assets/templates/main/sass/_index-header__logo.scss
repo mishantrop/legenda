@@ -1,55 +1,67 @@
 .index-header__logo {
-    &-link {
-        display: block;
-        overflow: hidden;
-        padding: 0 0 0 0;
-        text-decoration: none;
-        &:focus {
-            opacity: 0.9;
-            outline: none;
-        }
-        @media only screen and (max-width: 1200px) {
-            margin: 0 0 20px 0;
-        }
-        @media only screen and (max-width: 1024px) {
-            margin: 0 0 20px 0;
-        }
-        @media only screen and (max-width: 992px) {
-            margin: 0 0 20px 0;
-        }
-        @media only screen and (max-width: 720px) {
-            margin: 0 0 20px 0;
-        }
-        @media only screen and (max-width: 600px) {
-            margin: 0 0 20px 0;
-        }
+  &-link {
+    display: block;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    text-decoration: none;
+
+    &:focus {
+      opacity: 0.9;
+      outline: none;
     }
-    &-image {
-        display: block;
-        width: 100%;
-        @media only screen and (max-width: 1200px) {
-            margin: 0 auto;
-            width: 50%;
-        }
-        @media only screen and (max-width: 1024px) {
-            margin: 0 auto;
-            width: 50%;
-        }
-        @media only screen and (max-width: 992px) {
-            margin: 0 auto;
-            width: 50%;
-        }
-        @media only screen and (max-width: 720px) {
-            margin: 0 auto;
-            max-width: 100%;
-            min-width: 50%;
-            width: auto;
-        }
-        @media only screen and (max-width: 600px) {
-            margin: 0 auto;
-            max-width: 100%;
-            min-width: 50%;
-            width: auto;
-        }
+
+    @media only screen and (max-width: 1200px) {
+      margin: 0 0 20px 0;
     }
+
+    @media only screen and (max-width: 1024px) {
+      margin: 0 0 20px 0;
+    }
+
+    @media only screen and (max-width: 992px) {
+      margin: 0 0 20px 0;
+    }
+
+    @media only screen and (max-width: 720px) {
+      margin: 0 0 20px 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &-image {
+    display: block;
+    width: 100%;
+
+    @media only screen and (max-width: 1200px) {
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 992px) {
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 720px) {
+      margin: 0 auto;
+      max-width: 100%;
+      min-width: 50%;
+      width: auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin: 0 auto;
+      max-width: 100%;
+      min-width: 50%;
+      width: auto;
+    }
+  }
 }

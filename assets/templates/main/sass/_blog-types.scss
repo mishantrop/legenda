@@ -1,46 +1,54 @@
 .blog-types {
-    background-color: #fff;
-    clear: both;
-    margin: 0 0 20px 0;
-    overflow: hidden;
-    padding: 20px 0;
-    &__ul {
-        display: block;
-        margin: 0;
-        padding: 0;
+  background-color: #fff;
+  clear: both;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  padding: 20px 0;
+
+  &__ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__li {
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+
+    @media only screen and (max-width: 480px) {
+      float: none;
+      padding: 0 20px;
     }
-    &__li {
-        display: block;
-        float: left;
-        list-style: none;
-        margin: 0;
-        padding: 0 15px;
-		@media only screen and (max-width: 480px) {
-			float: none;
-	        padding: 0 20px;
-		}
-		@media only screen and (max-width: 360px) {
-			float: none;
-	        padding: 0 20px;
-		}
+
+    @media only screen and (max-width: 360px) {
+      float: none;
+      padding: 0 20px;
     }
-    &__a {
-        color: $color-fourth;
-        display: block;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 4px 0;
-        text-decoration: none;
-		&:focus {
-            color: $color-second--hover;
-			outline: none;
-		}
-        &:hover {
-            color: $color-second--hover;
-        }
-        &--active {
-            border-bottom: 3px solid $color-second--hover;
-            color: $color-second--hover;
-        }
+  }
+
+  &__a {
+    color: $color-fourth;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 0;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-second--hover;
     }
+
+    &:focus {
+      color: $color-second--hover;
+      outline: none;
+    }
+
+    &--active {
+      border-bottom: 3px solid $color-second--hover;
+      color: $color-second--hover;
+    }
+  }
 }

@@ -6,9 +6,7 @@ $(function() {
 
 function resizeIndexWorkflow(wrapper) {
 	var windowWidth = $(window).width();
-	console.log('windowWidth: ' + windowWidth);
 	if (windowWidth < 976) {
-		console.log('I dont want to recalculate index-workflow');
 		return false;
 	}
 	
@@ -17,9 +15,6 @@ function resizeIndexWorkflow(wrapper) {
 	var wrapperInitialHeight = parseInt(wrapper.attr('data-height'));
 	var wrapperInitialWidth = parseInt(wrapper.attr('data-width'));
 	var k = parseFloat(wrapperInitialHeight/wrapperHeight);
-	//console.log('w1: ' + wrapperInitialHeight);
-	//console.log('w2: ' + wrapperHeight);
-	//console.log('k: ' + k);
 	
 	wrapper.find('.index-workflow-baloon').each(function(idx, e) {
 		var left = parseInt($(e).attr('data-left'));
@@ -36,7 +31,6 @@ function resizeIndexWorkflow(wrapper) {
 function closePopups(wrapper) {
 	wrapper.find('.index-workflow-popup').fadeOut(256, function() {
 		wrapper.find('.index-workflow__popups').removeClass('index-workflow__popups--active');
-		//wrapper.find('.index-workflow__baloons').css('z-index', 1);
 		setTimeout(function explode() {
 			wrapper.find('.index-workflow__baloons').css('z-index', 1);
 		}, 200);
@@ -67,20 +61,15 @@ function initIndexWorkflow() {
 		
 		// Клик по херне
 		wrapper.find('.index-workflow-baloon[data-id]').click(function(e) {
-			//console.debug(e.target.className);
 			var baloon = $(this);
 			var baloonId = baloon.attr('data-id');
 			var wrapperHeight = parseInt(wrapper.outerHeight());
 			var wrapperWidth = parseInt(wrapper.outerWidth());
-			/*console.debug(baloonId);
-			console.debug($(this));
-			console.debug($('.index-workflow-popup[data-id="'+baloonId+'"]'));*/
 			wrapper.find('.index-workflow-popup[data-id]').fadeOut();
 			//wrapper.find('.index-workflow-popup[data-id="'+baloonId+'"]').fadeIn();
 			
 			var popup = wrapper.find('.index-workflow-popup[data-id="'+baloonId+'"]');
 			if (popup.length == 1) {
-				console.log('A');
 				popup.fadeIn();
 				var popupHeight = parseInt(popup.outerHeight());
 				var popupWidth = parseInt(popup.outerWidth());
@@ -94,7 +83,6 @@ function initIndexWorkflow() {
 		
 		// Клик по фону скрывает окна
 		wrapper.click(function(e) {
-			//console.debug(e.target.className);
 			if (e.target.id == 'index-workflow__baloons' || e.target.id == 'index-workflow__popups') {
 				closePopups(wrapper);
 			}

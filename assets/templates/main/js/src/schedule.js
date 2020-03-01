@@ -70,25 +70,11 @@ function sendScheduleSearch() {
                 });
                 $('.course-groups .row').html(data);
                 $('.course-groups .row .col[data-process="1"]').fadeIn();
-				initScheduleGroupSameHeight('.course-groups .row .col[data-process="1"]');
+				initElementsSameHeight('.course-groups .row .col[data-process="1"]');
             } else {
                 $('#course-groups__empty').fadeIn();
             }
             initAjaxModals();
         }
     });
-}
-
-function initScheduleGroupSameHeight(selector) {
-	var windowWidth = $(window).outerWidth();
-	$(selector).css('height', 'auto');
-	if (!isTablet()) {
-		var maxHeight = 0;
-		$.each($(selector), function(idx, e) {
-			maxHeight = ($(e).outerHeight() > maxHeight) ? $(e).outerHeight() : maxHeight;
-		});
-		$(selector).css('height', maxHeight);
-	} else {
-		$(selector).css('height', 'auto');
-	}
 }

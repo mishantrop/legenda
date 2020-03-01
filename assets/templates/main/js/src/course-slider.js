@@ -10,11 +10,11 @@ function initCourseSlider() {
 		nav: false,
 		responsive: {
 			600: {
-				items: 3
+				items: 3,
 			},
 			0: {
-				items: 1
+				items: 1,
 			},
-		}
+		},
 	});
 }

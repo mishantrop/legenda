@@ -1,114 +1,141 @@
 .blog-items {
-    @media only screen and (max-width: 992px) {
-        padding: 0 20px;
-        .row {
-            margin: 0 !important;
-            .col {
-                padding: 0 !important;
-            }
-        }
-    }
-    @media only screen and (max-width: 480px) {
-        padding: 0 20px;
-        .row {
-            margin: 0 !important;
-            .col {
-                padding: 0 !important;
-            }
-        }
-    }
-    @media only screen and (max-width: 360px) {
-        padding: 0 20px;
-        .row {
-            margin: 0 !important;
-            .col {
-                padding: 0 !important;
-            }
-        }
-    }
+  @media only screen and (max-width: 992px) {
+    padding: 0 20px;
+
     .row {
-        @media only screen and (max-width: 480px) {
-            margin: 0 !important;
-        }
-        @media only screen and (max-width: 360px) {
-            margin: 0 !important;
-        }
-        .col {
-            padding: 0 10px;
-            @media only screen and (max-width: 480px) {
-                padding: 0 !important;
-            }
-            @media only screen and (max-width: 360px) {
-                padding: 0 !important;
-            }
-        }
+      margin: 0 !important;
+
+      .col {
+        padding: 0 !important;
+      }
     }
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 0 20px;
+
+    .row {
+      margin: 0 !important;
+
+      .col {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding: 0 20px;
+
+    .row {
+      margin: 0 !important;
+
+      .col {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .row {
+    @media only screen and (max-width: 480px) {
+      margin: 0 !important;
+    }
+
+    @media only screen and (max-width: 360px) {
+      margin: 0 !important;
+    }
+
+    .col {
+      padding: 0 10px;
+
+      @media only screen and (max-width: 480px) {
+        padding: 0 !important;
+      }
+
+      @media only screen and (max-width: 360px) {
+        padding: 0 !important;
+      }
+    }
+  }
 }
 
 .blog-item {
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    margin: 0 0 20px 0;
-    overflow: hidden;
-    &__description {
-        color: #000;
-        font-size: 15px;
-        line-height: 1.5;
-        margin: 0 0 10px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+
+  &__description {
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+  }
+
+  &__image {
+    display: block;
+    height: 260px;
+    width: 180px;
+
+    &-wrapper {
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+
+      @media only screen and (max-width: 360px) {
+        display: none;
+      }
     }
-    &__image {
-        display: block;
-        height: 260px;
-        width: 180px;
-        &-wrapper {
-            @media only screen and (max-width: 480px) {
-                display: none;
-            }
-            @media only screen and (max-width: 360px) {
-                display: none;
-            }
-        }
+  }
+
+  &__info {
+    padding: 20px;
+  }
+
+  &__more {
+    @include gay-gradient();
+
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 11px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      @include gay-gradient-hover();
     }
-    &__info {
-        padding: 20px;
+
+    &:focus {
+      @include gay-gradient-hover();
+
+      outline: none;
     }
-    &__more {
-        @include gay-gradient();
-        border: none;
-        border-radius: 20px;
-        color: #fff;
-        display: inline-block;
-        font-size: 14px;
-        font-weight: normal;
-        padding: 11px 50px;
-        text-decoration: none;
-        text-transform: uppercase;
-        &:active {
-            outline: none;
-        }
-        &:focus {
-            @include gay-gradient-hover();
-            outline: none;
-        }
-        &:hover {
-            @include gay-gradient-hover();
-        }
+
+    &:active {
+      outline: none;
     }
-    &__pagetitle {
-        color: #223c92;
-        display: block;
-        font-size: 20px;
-        margin: 0 0 10px 0;
-        text-decoration: none;
-        &:focus {
-            color: $color-second--hover;
-            outline: none;
-            text-decoration: underline;
-        }
-        &:hover {
-            color: $color-second--hover;
-            text-decoration: underline;
-        }
+  }
+
+  &__pagetitle {
+    color: #223c92;
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+
+    &:focus {
+      color: $color-second--hover;
+      outline: none;
+      text-decoration: underline;
     }
+
+    &:hover {
+      color: $color-second--hover;
+      text-decoration: underline;
+    }
+  }
 }

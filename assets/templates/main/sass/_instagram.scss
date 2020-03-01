@@ -1,108 +1,126 @@
 .instagram {
-	display: block;
-	margin: 0 0 0 0;
-	width: 100%;
-	@media only screen and (max-width: 992px) {
-		margin: 0 auto;
-		width: 50%;
-	}
-	@media only screen and (max-width: 600px) {
-		margin: 0 auto;
-		width: 90%;
-	}
-    &-slider {
+  display: block;
+  margin: 0 0 0 0;
+  width: 100%;
+
+  @media only screen and (max-width: 992px) {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  &-slider {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    &-item {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      height: 310px;
+      list-style: none;
+      position: relative;
+
+      @media only screen and (max-width: 1200px) {
+        height: 250px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        height: 250px;
+      }
+
+      &__description {
+        color: #fff;
         display: block;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        &-item {
-            background-position: center center;
-	        background-repeat: no-repeat;
-            background-size: cover;
-            display: block;
-            height: 310px;
-            list-style: none;
-            position: relative;
-			@media only screen and (max-width: 1200px) {
-				height: 250px;
-			}
-			@media only screen and (max-width: 1024px) {
-				height: 250px;
-			}
-            &__a {
-                bottom: 0;
-                display: block;
-                padding: 20px;
-                position: absolute;
-                text-decoration: none;
-                &:hover {
-                    .instagram-slider-item__username {
-                        color: #ea875b;
-                    }
-                    .instagram-slider-item__description {
-                        color: #ea875b;
-                    }
-                }
-            }
-            &__description {
-                color: #fff;
-                display: block;
-                font-size: 1rem;
-                text-shadow: #001 1px 1px 1px;
-            }
-            &__avatar {
-                border-radius: 30px;
-                float: left;
-                height: 60px;
-                margin: 0 15px 0 0;
-                width: 60px !important;
-            }
-            &__username {
-                color: #fff;
-                display: block;
-                font-size: 1rem;
-                margin: 10px 0 0 0;
-                text-shadow: #001 1px 1px 1px;
-            }
+        font-size: 1rem;
+        text-shadow: #001 1px 1px 1px;
+      }
+
+      &__avatar {
+        border-radius: 30px;
+        float: left;
+        height: 60px;
+        margin: 0 15px 0 0;
+        width: 60px !important;
+      }
+
+      &__username {
+        color: #fff;
+        display: block;
+        font-size: 1rem;
+        margin: 10px 0 0 0;
+        text-shadow: #001 1px 1px 1px;
+      }
+
+      &__a {
+        bottom: 0;
+        display: block;
+        padding: 20px;
+        position: absolute;
+        text-decoration: none;
+
+        &:hover {
+          .instagram-slider-item__username {
+            color: #ea875b;
+          }
+
+          .instagram-slider-item__description {
+            color: #ea875b;
+          }
         }
-        &__left {
-            background-color: #ea875b;
-            color: #fff;
-            cursor: pointer;
-            display: block;
-            float: left;
-            font-size: 20px;
-            list-style: none;
-			margin: 0;
-            padding: 28px 0 28px 45px;
-            text-align: left;
-            width: 50%;
-            &:hover {
-                background-color: #d47348;
-            }
-        }
-        &__nav {}
-        &__right {
-            background-color: #ea875b;
-            color: #fff;
-            cursor: pointer;
-            display: block;
-            float: left;
-            font-size: 20px;
-            list-style: none;
-			margin: 0;
-            padding: 28px 45px 28px 0;
-            text-align: right;
-            width: 50%;
-            &:hover {
-                background-color: #d47348;
-            }
-        }
-        &__ul {
-            display: block;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-        }
+      }
     }
+
+    &__left {
+      background-color: #ea875b;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      float: left;
+      font-size: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 28px 0 28px 45px;
+      text-align: left;
+      width: 50%;
+
+      &:hover {
+        background-color: #d47348;
+      }
+    }
+
+    &__right {
+      background-color: #ea875b;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      float: left;
+      font-size: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 28px 45px 28px 0;
+      text-align: right;
+      width: 50%;
+
+      &:hover {
+        background-color: #d47348;
+      }
+    }
+
+    &__ul {
+      display: block;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
 }

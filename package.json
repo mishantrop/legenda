@@ -4,6 +4,12 @@
   "description": "legendame.ru",
   "main": "index.php",
   "author": "https://quasi-art.ru",
+  "scripts": {
+    "start": "gulp watch-main",
+    "css": "gulp sass-main",
+    "js": "gulp js-main",
+    "stylelint": "node node_modules/stylelint/bin/stylelint.js \"./assets/templates/main/sass/**/*.scss\""
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -12,6 +18,9 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.0",
     "gulp-uglifyjs": "^0.6.2",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.11.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }

@@ -1,24 +1,10 @@
-function initCourseCategorySameHeight(selector) {
-    var windowWidth = $(window).outerWidth();
-    $(selector).css('height', 'auto');
-    if (!isTablet()) {
-        var maxHeight = 0;
-        $.each($(selector), function(idx, e) {
-            maxHeight = ($(e).outerHeight() > maxHeight) ? $(e).outerHeight() : maxHeight;
-        });
-        $(selector).css('height', maxHeight);
-    } else {
-        $(selector).css('height', 'auto');
-    }
-}
-
 $(function() {
 	var courseItems = $('.course-item');
 	
 	if (courseItems.length > 0) {
-		initCourseCategorySameHeight('.course-item');
+		initElementsSameHeight('.course-item');
 		$(window).resize(function(e) {
-			initCourseCategorySameHeight('.course-item');
+			initElementsSameHeight('.course-item');
 		});
 		
 		$('.courses-categories-item__link').click(function(e) {
@@ -56,7 +42,7 @@ $(function() {
 				});
 				if (visibleCount > 0) {
 					$('#courses-items__empty').hide();
-					initCourseCategorySameHeight('.course-item');
+					initElementsSameHeight('.course-item');
 				} else {
 					$('#courses-items__empty').fadeIn();
 				}

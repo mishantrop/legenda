@@ -1,27 +1,12 @@
-function initGroupSameHeight(selector) {
-	var windowWidth = $(window).outerWidth();
-	$(selector).css('height', 'auto');
-	if (!isTablet()) {
-		var maxHeight = 0;
-		$.each($(selector), function(idx, e) {
-			maxHeight = ($(e).outerHeight() > maxHeight) ? $(e).outerHeight() : maxHeight;
-		});
-		$(selector).css('height', maxHeight);
-	} else {
-		$(selector).css('height', 'auto');
-	}
-}
-
 $(function() {
-	initGroupSameHeight('.course-group');
+	initElementsSameHeight('.course-group');
 	$(window).resize(function(e) {
-		initGroupSameHeight('.course-group');
+		initElementsSameHeight('.course-group');
 	});
 
 	var courseGroupsWrapper = $('.course-groups');
 	if (courseGroupsWrapper.length == 1) {
 		var groups = courseGroupsWrapper.find('[data-process="1"]');
-		console.debug(groups);
 		if (groups.length > 0) {
 			$('#course-groups__empty').hide();
 		} else {

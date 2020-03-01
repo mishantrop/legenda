@@ -1,95 +1,94 @@
 .index-subheader {
-    background-color: #f7f4dc;
-    background-image: url('../images/index-subheader/index-subheader__background.svg');
-    background-position: 0 -85px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 506px;
-    padding: 0 0 0 410px;
+  background-color: #f7f4dc;
+  background-position: 0 -85px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 506px;
+  padding: 0 0 0 410px;
+  @media only screen and (max-width: 1200px) {
+    min-height: 470px;
+    padding: 0 30px 0 30px;
+  }
+  @media only screen and (max-width: 1024px) {
+    background-position: 0px -15px;
+    height: 430px;
+    padding: 0 50px 0 50px;
+  }
+  @media only screen and (max-width: 720px) {
+    height: 430px;
+    padding: 0 50px 0 50px;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 560px;
+    padding: 0 20px 0 20px;
+  }
+  @media only screen and (max-width: 360px) {
+		  background-position: -48px -15px;
+    padding: 0 10px 0 10px;
+  }
+  &__lines {
+    max-width: 510px;
     @media only screen and (max-width: 1200px) {
-        min-height: 470px;
-        padding: 0 30px 0 30px;
+      margin: 0 auto;
+      max-width: none;
+      width: 50%;
     }
     @media only screen and (max-width: 1024px) {
-        background-position: 0px -15px;
-        height: 430px;
-        padding: 0 50px 0 50px;
+      margin: 0 auto;
+      max-width: none;
+      width: 67%;
+    }
+    @media only screen and (max-width: 992px) {
+      max-width: none;
+      width: 80%;
     }
     @media only screen and (max-width: 720px) {
-        height: 430px;
-        padding: 0 50px 0 50px;
+      max-width: none;
+      width: 90%;
     }
     @media only screen and (max-width: 600px) {
-        height: 560px;
-        padding: 0 20px 0 20px;
+      height: 570px;
+      max-width: none;
+    }
+    @media only screen and (max-width: 480px) {
+      max-width: none;
+      width: 100%;
     }
     @media only screen and (max-width: 360px) {
-		    background-position: -48px -15px;
-        padding: 0 10px 0 10px;
+      max-width: none;
+      width: 100%;
     }
-    &__lines {
-        max-width: 510px;
-        @media only screen and (max-width: 1200px) {
-            margin: 0 auto;
-            max-width: none;
-            width: 50%;
-        }
-        @media only screen and (max-width: 1024px) {
-            margin: 0 auto;
-            max-width: none;
-            width: 67%;
-        }
-        @media only screen and (max-width: 992px) {
-            max-width: none;
-            width: 80%;
-        }
-        @media only screen and (max-width: 720px) {
-            max-width: none;
-            width: 90%;
-        }
-        @media only screen and (max-width: 600px) {
-            height: 570px;
-            max-width: none;
-        }
-        @media only screen and (max-width: 480px) {
-            max-width: none;
-            width: 100%;
-        }
-        @media only screen and (max-width: 360px) {
-            max-width: none;
-            width: 100%;
-        }
+  }
+  &__line {
+    &--1 {
+      color: #fff;
+      font-size: 40px;
+      line-height: 1.2;
+      margin: 0 0 10px 0;
+      @media only screen and (max-width: 1200px) {
+        font-size: 36px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 24px;
+				text-align: center;
+      }
+      @media only screen and (max-width: 360px) {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+				text-align: center;
+      }
     }
-    &__line {
-        &--1 {
-            color: #fff;
-            font-size: 40px;
-            line-height: 1.2;
-            margin: 0 0 10px 0;
-            @media only screen and (max-width: 1200px) {
-                font-size: 36px;
-            }
-            @media only screen and (max-width: 600px) {
-                font-size: 24px;
+    &--2 {
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.5;
+      text-transform: lowercase;
+      @media only screen and (max-width: 600px) {
 				text-align: center;
-            }
-            @media only screen and (max-width: 360px) {
-                font-size: 24px;
-                margin: 0 0 10px 0;
+      }
+      @media only screen and (max-width: 360px) {
 				text-align: center;
-            }
-        }
-        &--2 {
-            color: #fff;
-            font-size: 17px;
-            line-height: 1.5;
-            text-transform: lowercase;
-            @media only screen and (max-width: 600px) {
-				text-align: center;
-            }
-            @media only screen and (max-width: 360px) {
-				text-align: center;
-            }
-        }
+      }
     }
+  }
 }
