@@ -1,0 +1,14 @@
+{
+    "name": "mishantrop/legenda",
+    "description": "Website of Moscow Sport School legendame.ru",
+    "type": "project",
+    "require": {
+        "modx/revolution": "2.7.3"
+    },
+    "authors": [
+        {
+            "name": "mishantrop",
+            "email": "quasi-art@ya.ru"
+        }
+    ]
+}
